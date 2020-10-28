@@ -2,4 +2,7 @@
     <string name="app_name">Wechat2</string>
     <string name="img">Img</string>
     <string name="dd1">中国联通</string>
+    <string name="app_expression">表情</string>
+    <string name="app_issue">发送</string>
+    <string name="app_voice">语音</string>
 </resources>

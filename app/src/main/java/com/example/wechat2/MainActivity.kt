@@ -1,5 +1,6 @@
 package com.example.wechat2
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.widget.Toast
@@ -14,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     private val fruitList= ArrayList<Fruit>()
 
     fun initFruits(){
-        repeat(1)
+        repeat(2)
         {
             fruitList.add(Fruit("文件传输助手","[图片]",R.drawable.dd2))
             fruitList.add(Fruit("今晚打阿威","王禧龙：[动画表情]",R.drawable.dd6))
@@ -49,6 +50,9 @@ class MainActivity : AppCompatActivity() {
         listViewTest.setOnItemClickListener{ _, _, i, _ ->
             val fruit = fruitList[i]
             Toast.makeText(this,fruit.name,Toast.LENGTH_SHORT).show()
+
+            val intent = Intent(this,ChatActivity::class.java)
+            startActivity(intent)
         }
     }
 
